@@ -1,0 +1,177 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins&display=swap);
+
+*{ /* Con esto seleccionamos todos los estilos*/
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.header-wrapper{
+    display: grid;
+    background-color: #3C2A21;
+    grid-template-columns: 1fr 1fr 1fr; /*fr es fracción, de preferencia utilizar esto en vez de "auto" para hacer el grid responsivo */ 
+    grid-template-rows: 5rem; /*Esto define el largo del renglón*/
+}
+
+.logo{
+    height: 100%; /*Se adapta a la altura de su contenedor*/
+    object-fit: cover; /*Este también se usa para adaptar imagenes a los contenedores, solo que con imágenes más grandes*/
+}
+
+.header-logo{
+    padding: 10px;
+    text-align: left;
+}
+
+.header-title{
+    padding: 10px;
+    text-align: center;
+    align-self: center; /*Esto hace que se centre verticalmente*/
+    color: white;
+}
+
+.header-input{
+    padding: 10px;
+    text-align: center;
+    align-self: center;
+}
+
+.input[type=text]{
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+}
+
+.hero-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    color: white;
+}
+
+.hero {
+    width: 100%;
+    height: 60vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    color: white;
+
+    background-image: url('/assets/images/MicrosoftTeams-image.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.hero h1 {
+    font-size: 4em;
+    margin-top: 0;
+}
+
+.hero .btn {
+    display: block;
+    width: 200px;
+
+    padding: 1em;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+
+    border: 3px solid white;
+    border-radius: 30px;
+}
+
+.card{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+
+.container{
+    padding: 2px 16px;
+}
+
+.card img{
+    border-radius: 5px 5px 0 0;
+    width: 100%;
+    height: 350px;
+}
+
+.product-wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+    padding: 10px;
+}
+
+.text-justify{
+    text-align: justify;
+}
+
+.additional-wrapper{
+    display: grid;
+    padding: 10px;
+    background-color: #1A120B;
+    color: white;
+}
+
+footer{
+    margin-top: 3rem;
+    background-color: #3C2A21;
+    color: white;
+    text-align: center;
+}
+
+.social-wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    padding: 10px;
+    align-self: center;
+}
+
+.network-img{
+    height: 4rem;
+}
+
+
+@media screen and (max-width: 1200px) {
+    .product-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10px;
+        padding: 10px;
+    }
+
+}
+@media screen and (max-width: 768px) {
+    .header-wrapper {
+        grid-template-columns: 1fr;
+        grid-template-rows: 5rem 5rem 5rem;
+        position: relative;
+    }
+
+    .header-logo, .header-title, .header-input  {
+        text-align: center;
+    }
+
+
+    .card img {
+        height: 250px;
+    }
+
+
+    .product-wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
+        padding: 10px;
+    }
+
+}
+
